@@ -19,7 +19,7 @@ const Header = () => {
         </div>
         <div className="menu">
           {links.map((link) => (
-            <NavLink to={link.url} className="menu-item" exact>
+            <NavLink to={link.url} className="menu-item" exact key={link.title}>
               <div>{link.title}</div>
               <span></span>
               <span></span>

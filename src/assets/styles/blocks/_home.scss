@@ -1,0 +1,44 @@
+.home-page {
+  width: $content-width;
+  &-top {
+    margin-top: 2.5rem;
+    position: relative;
+
+    @media (max-width: $lg) {
+      padding: 0 1rem; 
+    }
+
+    &-content {
+      position: absolute;
+      width: 21.625rem;
+      top: 5.75rem;
+      left: 3.75rem;
+      color: $c-white;
+      font-size: 1.25rem;
+      font-weight: 500;
+
+      &__title {
+        font-size: 3rem;
+        font-family: $f-secondary;
+        margin-bottom: 1.5rem;
+        line-height: 3rem;
+      }
+
+      &__btns {
+        margin-top: 2rem;
+        display: flex;
+
+        .btn-outlined {
+          margin-left: 1rem;
+        }
+      }
+    }
+  }
+
+  .home-page__back {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+}
