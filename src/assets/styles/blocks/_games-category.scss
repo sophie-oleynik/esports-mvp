@@ -1,0 +1,30 @@
+.games-block {
+  flex-direction: column;
+}
+
+.games-items {
+  display: flex;
+  position: relative;
+  margin-left: 7rem;
+  border-top: 0.065rem solid transparent !important;
+  border-right: 0.065rem solid transparent !important;
+  border-bottom: 0.065rem solid transparent !important;
+  border-left: 0.25rem solid;
+  cursor: pointer;
+
+  &:hover {
+    border-top: 0.065rem solid unset !important;
+    border-right: 0.065rem solid unset !important;
+    border-bottom: 0.065rem solid unset !important;
+    border-left: 0.25rem solid;
+  }
+
+  &__title {
+    font-size: "Roboto", sans-serif;
+    font-weight: 500;
+    color: $c-white;
+    position: absolute;
+    top: 2.5rem;
+    left: 1rem;
+  }
+}

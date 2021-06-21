@@ -10,9 +10,6 @@
     align-items: center;
     width: $content-width;
     margin: 0 auto;
-    @media (max-width: $lg) {
-      padding: 0 1rem; 
-    }
   }
   .header__logo svg {
     height: 3.75rem;

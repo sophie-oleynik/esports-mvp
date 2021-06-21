@@ -2,11 +2,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 // COLORS
-$c-primary: #8CC63F;
+$c-primary: #8cc63f;
 $c-white: #ffffff;
 $c-black: #000000;
-$c-dark: #1B1D21;
-$c-blue: #3EA2FF;
+$c-dark: #1b1d21;
+$c-blue: #3ea2ff;
 $c-grey: #85879e;
 // FONTS
 $f-primary: "Roboto", sans-serif;
@@ -47,7 +47,7 @@ img {
   cursor: pointer;
   white-space: nowrap;
   font-size: 1.25rem;
-  line-height:1.5rem;
+  line-height: 1.5rem;
 }
 
 .btn-primary {
@@ -64,9 +64,12 @@ img {
   }
 }
 
-@import './blocks/header';
-@import './blocks/breadcumbs';
-@import './blocks/home';
+@import "./blocks/header";
+@import "./blocks/breadcumbs";
+@import "./blocks/home";
+@import "./blocks/news-category";
+@import "./blocks/games-category";
+@import "./blocks/footer";
 
 .content {
   position: relative;
@@ -74,4 +77,3 @@ img {
   display: flex;
   justify-content: center;
 }
-

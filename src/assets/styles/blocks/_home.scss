@@ -4,10 +4,6 @@
     margin-top: 2.5rem;
     position: relative;
 
-    @media (max-width: $lg) {
-      padding: 0 1rem; 
-    }
-
     &-content {
       position: absolute;
       width: 21.625rem;
@@ -35,10 +31,49 @@
     }
   }
 
-  .home-page__back {
+  &__back {
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
+  }
+  &__categories {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10.25rem;
+    .category-block {
+      width: 45.75rem;
+      border-top: 0.0625rem solid #3c6801;
+      padding-top: 1.5rem;
+      display: flex;
+      position: relative;
+
+      &:last-child {
+        width: 32.25rem;
+      }
+      &__label {
+        width: 100%;
+        position: absolute;
+        margin-left: -2.5rem;
+        &::before {
+          content: "";
+          position: absolute;
+          width: 2.5rem;
+          height: 0.0625rem;
+          background: $c-primary;
+          top: -1.5625rem;
+          left: 2.5rem;
+        }
+        // &::after {
+        //   content: "";
+        //   position: absolute;
+        //   width: 9.5rem;
+        //   height: 26.5rem;
+        //   background: #1b1d21;
+        //   top: -1.5rem;
+        //   right: 0;
+        // }
+      }
+    }
   }
 }
