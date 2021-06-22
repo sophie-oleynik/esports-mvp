@@ -1,56 +1,60 @@
 import React from "react";
-import Rainbow from "../../assets/images/Rainbow.png";
-import Dota from "../../assets/images/Dota.png";
-import LoL from "../../assets/images/LoL.png";
-import GenshinImpact from "../../assets/images/GenshinImpact.png";
-import Overwatch from "../../assets/images/Overwatch.png";
-import Skyrim from "../../assets/images/Skyrim.png";
-import GamesImg from "../../assets/images/games.png";
+import Rainbow from "../assets/images/games/Rainbow.png";
+import Dota from "../assets/images/games/Dota.png";
+import LoL from "../assets/images/games/LoL.png";
+import GenshinImpact from "../assets/images/games/GenshinImpact.png";
+import Overwatch from "../assets/images/games/Overwatch.png";
+import Skyrim from "../assets/images/games/Skyrim.png";
+import GamesImg from "../assets/images/games/games.png";
+import GamesImgMob from "../assets/images/games/games_mob.png";
 
 const Games = () => {
   const games = [
     {
       title: "Rainbow six seige",
       image: Rainbow,
-      borderColor: "#596475",
+      color: "grey",
     },
     {
       title: "Dota 2",
       image: Dota,
-      borderColor: "#9D5352",
+      color: "red",
     },
     {
       title: "League of Legends",
       image: LoL,
-      borderColor: "#51B791",
+      color: "green",
     },
     {
       title: "Genshin Impact",
       image: GenshinImpact,
-      borderColor: "#9C8D6B",
+      color: "yellow",
     },
     {
       title: "Overwatch",
       image: Overwatch,
-      borderColor: "#957A86",
+      color: "pink",
     },
     {
       title: "Skyrim",
       image: Skyrim,
-      borderColor: "#7D8474",
+      color: "platinum",
     },
   ];
   return (
     <div className="category-block games-block">
       <div className="category-block__label">
-        <img src={GamesImg} alt="GAMES" />
+        <picture>
+          <source srcset={GamesImg} media="(min-width: 600px)" />
+          <img src={GamesImgMob} alt="GAMES" />
+        </picture>
       </div>
       {games.map((game, i) => (
         <GamesItems
           key={i}
           title={game.title}
           image={game.image}
-          borderColor={game.borderColor}
+          color={game.color}
         />
       ))}
     </div>
@@ -58,9 +62,9 @@ const Games = () => {
 };
 export default Games;
 
-const GamesItems = ({ title, image, borderColor }) => {
+const GamesItems = ({ title, image, color }) => {
   return (
-    <div className="games-items" style={{ borderColor: borderColor }}>
+    <div className={`games-items ${color}`}>
       <img src={image} alt={title} />
       <div className="games-items__title">{title}</div>
     </div>

@@ -17,6 +17,8 @@ $content-width: 80rem;
 // SCREEN SIZES
 $xl: 1920px;
 $lg: 1360px;
+$md: 900px;
+$sm: 600px;
 
 html {
   // 1920px -> 1rem -> 16px;
@@ -24,6 +26,12 @@ html {
 
   @media (min-width: $xl) {
     font-size: 16px;
+  }
+  @media (max-width: $md) {
+    font-size: 1vw;
+  }
+  @media (max-width: $sm) {
+    font-size: 5vw;
   }
 }
 body {
@@ -41,13 +49,21 @@ img {
   background: none;
   border: none;
   font-family: $f-secondary;
-  padding: 0 2.75rem;
   height: 3rem;
   transition: all 0.3s;
   cursor: pointer;
   white-space: nowrap;
   font-size: 1.25rem;
   line-height: 1.5rem;
+  width: 9.125rem;
+  text-align: center;
+
+  @media (max-width: $sm) {
+    height: 2rem;
+  width: 6.875rem;
+    font-size: 0.8rem;
+    line-height: 1rem;
+  }
 }
 
 .btn-primary {
@@ -69,6 +85,7 @@ img {
 @import "./blocks/home";
 @import "./blocks/news-category";
 @import "./blocks/games-category";
+@import "./blocks/_article-page";
 @import "./blocks/footer";
 
 .content {
@@ -76,4 +93,5 @@ img {
   background: $c-dark;
   display: flex;
   justify-content: center;
+  min-height: calc(100vh - 10rem);
 }

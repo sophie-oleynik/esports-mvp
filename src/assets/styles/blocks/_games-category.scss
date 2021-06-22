@@ -6,25 +6,68 @@
   display: flex;
   position: relative;
   margin-left: 7rem;
-  border-top: 0.065rem solid transparent !important;
-  border-right: 0.065rem solid transparent !important;
-  border-bottom: 0.065rem solid transparent !important;
-  border-left: 0.25rem solid;
   cursor: pointer;
+  transition: all 0.3s;
+  border: 0.065rem solid;
+  border-left: 0.25rem solid;
+  &.grey {
+    border-left-color: #596475;
+    &:hover {
+      border-color: #596475;
+    }
+  }
+  &.red {
+    border-left-color: #9D5352;
+    &:hover {
+      border-color: #9D5352;
+    }
+  }
+  &.green {
+    border-left-color: #51B791;
+    &:hover {
+      border-color: #51B791;
+    }
+  }
+  &.yellow {
+    border-left-color: #9C8D6B;
+    &:hover {
+      border-color: #9C8D6B;
+    }
+  }
+  &.pink {
+    border-left-color: #957A86;
+    &:hover {
+      border-color: #957A86;
+    }
+  }
+  &.platinum {
+    border-left-color: #7D8474;
+    &:hover {
+      border-color: #7D8474;
+    }
+  }
 
-  &:hover {
-    border-top: 0.065rem solid unset !important;
-    border-right: 0.065rem solid unset !important;
-    border-bottom: 0.065rem solid unset !important;
-    border-left: 0.25rem solid;
+  @media (max-width: $sm) {
+    margin-left: 0;
+    border: none;
+    margin-bottom: 0.065rem;
   }
 
   &__title {
-    font-size: "Roboto", sans-serif;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
     font-weight: 500;
     color: $c-white;
     position: absolute;
-    top: 2.5rem;
+    top: 50%;
     left: 1rem;
+    transform: translateY(-50%);
+
+    @media (max-width: $sm) {
+      font-size: 0.75rem;
+      line-height: 0.875rem;
+    }
+
   }
+  
 }

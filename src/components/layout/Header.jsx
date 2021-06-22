@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { ReactComponent as Logo } from "../../assets/icons/Logo Desktop.svg";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 const Header = () => {
+  const [active, setActive] = useState(false);
+  const toggleMenu = () => setActive(!active);
   const links = [
     { title: "Games", url: "/games" },
     { title: "News", url: "/" },
@@ -12,14 +14,14 @@ const Header = () => {
     { title: "Forum", url: "/forum" },
   ];
   return (
-    <div className="header">
+    <div className={`header ${active ? 'active' : ''}`}>
       <div className="header__inner">
-        <div className="header__logo">
+        <Link to="/" className="header__logo">
           <Logo />
-        </div>
+        </Link>
         <div className="menu">
           {links.map((link) => (
-            <NavLink to={link.url} className="menu-item" exact key={link.title}>
+            <NavLink to={link.url} className="menu-item" exact key={link.title} onClick={() => setActive(false)}>
               <div>{link.title}</div>
               <span></span>
               <span></span>
@@ -27,6 +29,9 @@ const Header = () => {
               <span></span>
             </NavLink>
           ))}
+        </div>
+        <div className="menu-btn" onClick={toggleMenu}>
+          <span></span><span></span><span></span>
         </div>
       </div>
     </div>
